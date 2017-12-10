@@ -1,75 +1,125 @@
-[gd_scene load_steps=19 format=1]
+[gd_scene load_steps=29 format=1]
 
 [ext_resource path="res://game.gd" type="Script" id=1]
-[ext_resource path="res://dialog.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/sounds/alarm.wav" type="Sample" id=2]
 [ext_resource path="res://player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/clouds_fg.png" type="Texture" id=4]
-[ext_resource path="res://assets/bg.png" type="Texture" id=5]
+[ext_resource path="res://colored.tres" type="CanvasItemMaterial" id=4]
+[ext_resource path="res://assets/clouds_fg.png" type="Texture" id=5]
+[ext_resource path="res://assets/bg.png" type="Texture" id=6]
+[ext_resource path="res://dialog.tscn" type="PackedScene" id=7]
+[ext_resource path="res://RichLabelFX.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/fonts/openSans_dynamicfont.tres" type="DynamicFont" id=9]
 
-[sub_resource type="ConvexPolygonShape2D" id=1]
+[sub_resource type="SampleLibrary" id=1]
 
-custom_solver_bias = 0.0
-points = Vector2Array( 7909.34, 5778.15, 13512, 9693.46, 6922.95, 8848.7, 7240.15, 5645.86 )
+samples/alarm = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 2 )
+}
 
-[sub_resource type="ConvexPolygonShape2D" id=2]
-
-custom_solver_bias = 0.0
-points = Vector2Array( -83.4456, 49.2684, 10.2176, 54.0989, -22.591, 205.839, -484.905, 1570.81 )
-
-[sub_resource type="ConvexPolygonShape2D" id=3]
-
-custom_solver_bias = 0.0
-points = Vector2Array( -484.905, 1570.81, -22.591, 205.839, 9.70276, 565.36 )
-
-[sub_resource type="ConvexPolygonShape2D" id=4]
+[sub_resource type="ConvexPolygonShape2D" id=20]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -484.905, 1570.81, 9.70276, 565.36, 198.517, 869.98 )
+points = Vector2Array( 103174, 33648.4, 113304, 62965.7, -358.721, 60481.4, 68210, 30604.4 )
 
-[sub_resource type="ConvexPolygonShape2D" id=5]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 7240.15, 5645.86, 6922.95, 8848.7, -653.857, 4027.1, 6345.3, 5319.05 )
-
-[sub_resource type="ConvexPolygonShape2D" id=6]
+[sub_resource type="ConvexPolygonShape2D" id=21]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -484.905, 1570.81, 198.517, 869.98, 430.129, 1076.42 )
+points = Vector2Array( 57186.9, 22716.4, 68210, 30604.4, -358.721, 60481.4, 35114.4, 20602.7 )
 
-[sub_resource type="ConvexPolygonShape2D" id=7]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 6345.3, 5319.05, 7131.21, 5217.89, 7240.15, 5645.86 )
-
-[sub_resource type="ConvexPolygonShape2D" id=8]
+[sub_resource type="ConvexPolygonShape2D" id=22]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 2979.89, 2497.98, 3396.06, 2729.43, 6174.11, 4937.76, 6345.3, 5319.05, -653.857, 4027.1, -484.905, 1570.81 )
+points = Vector2Array( 24894.4, 17590.3, 35114.4, 20602.7, -358.721, 60481.4 )
 
-[sub_resource type="ConvexPolygonShape2D" id=9]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 1444.69, 1282.85, 2499.79, 1888.83, 2979.89, 2497.98, -484.905, 1570.81, 1200.49, 1242.57 )
-
-[sub_resource type="ConvexPolygonShape2D" id=10]
+[sub_resource type="ConvexPolygonShape2D" id=23]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 699.504, 1159.5, 1200.49, 1242.57, -484.905, 1570.81 )
+points = Vector2Array( -5192.09, 731.892, 32.7838, -64.5763, 22.5311, 249.158 )
 
-[sub_resource type="ConvexPolygonShape2D" id=11]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 430.129, 1076.42, 699.504, 1159.5, -484.905, 1570.81 )
-
-[sub_resource type="ConvexPolygonShape2D" id=12]
+[sub_resource type="ConvexPolygonShape2D" id=24]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -484.905, 1570.81, 430.129, 1076.42, -484.905, 1570.81 )
+points = Vector2Array( 4404.67, 5515.47, 5350.47, 5114.22, 5557.45, 5683.99, -358.721, 60481.4 )
 
-[sub_resource type="ColorRamp" id=13]
+[sub_resource type="ConvexPolygonShape2D" id=25]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -5192.09, 731.892, 22.5311, 249.158, 223.069, 3171.37, -358.721, 60481.4 )
+
+[sub_resource type="ConvexPolygonShape2D" id=26]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -358.721, 60481.4, 223.069, 3171.37, 433.246, 4470.64 )
+
+[sub_resource type="ConvexPolygonShape2D" id=27]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -358.721, 60481.4, 433.246, 4470.64, 1013.41, 5271.86 )
+
+[sub_resource type="ConvexPolygonShape2D" id=28]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -358.721, 60481.4, 1013.41, 5271.86, 1920.76, 5735.2 )
+
+[sub_resource type="ConvexPolygonShape2D" id=29]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -358.721, 60481.4, 1920.76, 5735.2, 3392, 5763.86 )
+
+[sub_resource type="ConvexPolygonShape2D" id=30]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -358.721, 60481.4, 3392, 5763.86, 4404.67, 5515.47 )
+
+[sub_resource type="ConvexPolygonShape2D" id=31]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -358.721, 60481.4, 5557.45, 5683.99, 6512.75, 6285.7, 7120.52, 7718.31 )
+
+[sub_resource type="ConvexPolygonShape2D" id=32]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -358.721, 60481.4, 7120.52, 7718.31, 9312.85, 9172.63 )
+
+[sub_resource type="ConvexPolygonShape2D" id=33]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -358.721, 60481.4, 9312.85, 9172.63, 13605.2, 10445, 15033.5, 11020.9, 16483.2, 12157.1, 17717.3, 14155.3 )
+
+[sub_resource type="ConvexPolygonShape2D" id=34]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -358.721, 60481.4, 17717.3, 14155.3, 19343.3, 15017.3 )
+
+[sub_resource type="ConvexPolygonShape2D" id=35]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 24894.4, 17590.3, -358.721, 60481.4, 19343.3, 15017.3, 22849.9, 15017.3 )
+
+[sub_resource type="ColorRamp" id=18]
 
 offsets = FloatArray( 0, 0.315789, 0.807018, 1 )
 colors = ColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="Animation" id=19]
+
+resource/name = "Contact"
+length = 2.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Contact:visibility/opacity")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.2, 1.5, 2 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0, 1.0, 0.0 ]
+}
 
 [node name="game" type="Control"]
 
@@ -85,55 +135,77 @@ margin/right = 0.0
 margin/bottom = 0.0
 script/script = ExtResource( 1 )
 
-[node name="dialog" parent="." instance=ExtResource( 2 )]
+[node name="soundPlayer" type="SamplePlayer2D" parent="."]
 
-visibility/visible = false
+params/volume_db = 0.0
+params/pitch_scale = 1.0
+params/attenuation/min_distance = 1.0
+params/attenuation/max_distance = 2048.0
+params/attenuation/distance_exp = 1.0
+config/polyphony = 6
+config/samples = SubResource( 1 )
+config/pitch_random = 0.0
 
 [node name="player" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 92.6212, 2.94037 )
+transform/pos = Vector2( 236.462, -3.90921 )
 
 [node name="map" type="Node2D" parent="."]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="map"]
+[node name="StaticBody2D" type="StaticBody2D" parent="map" groups=[
+"obstacle",
+]]
 
+transform/pos = Vector2( -1172.79, 0 )
 input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/shape = SubResource( 20 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 1067.45, 21.0681 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 2 )
-shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/1/shape = SubResource( 21 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 1067.45, 21.0681 )
 shapes/1/trigger = false
-shapes/2/shape = SubResource( 3 )
-shapes/2/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/2/shape = SubResource( 22 )
+shapes/2/transform = Matrix32( 1, 0, 0, 1, 1067.45, 21.0681 )
 shapes/2/trigger = false
-shapes/3/shape = SubResource( 4 )
-shapes/3/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/3/shape = SubResource( 23 )
+shapes/3/transform = Matrix32( 1, 0, 0, 1, 1067.45, 21.0681 )
 shapes/3/trigger = false
-shapes/4/shape = SubResource( 5 )
-shapes/4/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/4/shape = SubResource( 24 )
+shapes/4/transform = Matrix32( 1, 0, 0, 1, 1067.45, 21.0681 )
 shapes/4/trigger = false
-shapes/5/shape = SubResource( 6 )
-shapes/5/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/5/shape = SubResource( 25 )
+shapes/5/transform = Matrix32( 1, 0, 0, 1, 1067.45, 21.0681 )
 shapes/5/trigger = false
-shapes/6/shape = SubResource( 7 )
-shapes/6/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/6/shape = SubResource( 26 )
+shapes/6/transform = Matrix32( 1, 0, 0, 1, 1067.45, 21.0681 )
 shapes/6/trigger = false
-shapes/7/shape = SubResource( 8 )
-shapes/7/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/7/shape = SubResource( 27 )
+shapes/7/transform = Matrix32( 1, 0, 0, 1, 1067.45, 21.0681 )
 shapes/7/trigger = false
-shapes/8/shape = SubResource( 9 )
-shapes/8/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/8/shape = SubResource( 28 )
+shapes/8/transform = Matrix32( 1, 0, 0, 1, 1067.45, 21.0681 )
 shapes/8/trigger = false
-shapes/9/shape = SubResource( 10 )
-shapes/9/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/9/shape = SubResource( 29 )
+shapes/9/transform = Matrix32( 1, 0, 0, 1, 1067.45, 21.0681 )
 shapes/9/trigger = false
-shapes/10/shape = SubResource( 11 )
-shapes/10/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/10/shape = SubResource( 30 )
+shapes/10/transform = Matrix32( 1, 0, 0, 1, 1067.45, 21.0681 )
 shapes/10/trigger = false
-shapes/11/shape = SubResource( 12 )
-shapes/11/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/11/shape = SubResource( 31 )
+shapes/11/transform = Matrix32( 1, 0, 0, 1, 1067.45, 21.0681 )
 shapes/11/trigger = false
+shapes/12/shape = SubResource( 32 )
+shapes/12/transform = Matrix32( 1, 0, 0, 1, 1067.45, 21.0681 )
+shapes/12/trigger = false
+shapes/13/shape = SubResource( 33 )
+shapes/13/transform = Matrix32( 1, 0, 0, 1, 1067.45, 21.0681 )
+shapes/13/trigger = false
+shapes/14/shape = SubResource( 34 )
+shapes/14/transform = Matrix32( 1, 0, 0, 1, 1067.45, 21.0681 )
+shapes/14/trigger = false
+shapes/15/shape = SubResource( 35 )
+shapes/15/transform = Matrix32( 1, 0, 0, 1, 1067.45, 21.0681 )
+shapes/15/trigger = false
 collision/layers = 1
 collision/mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -141,28 +213,45 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Polygon2D" type="Polygon2D" parent="map/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="map/StaticBody2D"]
 
-polygon = Vector2Array( -85.0375, 43.6518, 14.2693, 51.814, -19.7399, 206.896, 11.769, 570.395, 208.884, 875.146, 423.325, 1068.56, 675.608, 1144.25, 1449.28, 1295.62, 2498.73, 1901.14, 2955.2, 2498.06, 3376.56, 2673.63, 6247.16, 4966.42, 6353.01, 5326.33, 7221.03, 5209.89, 7337.47, 5654.48, 13545.6, 9601.05, 7276.83, 8915.41, -696.195, 4076.74, -421.939, 433.051 )
-uv = Vector2Array(  )
-color = Color( 1, 1, 1, 1 )
-vertex_colors = ColorArray(  )
+material/material = ExtResource( 4 )
+transform/pos = Vector2( 1067.45, 21.0681 )
+build_mode = 0
+polygon = Vector2Array( -5192.09, 731.892, 32.7838, -64.5763, 22.5311, 249.158, 223.069, 3171.37, 433.246, 4470.64, 1013.41, 5271.86, 1920.76, 5735.2, 3392, 5763.86, 4404.67, 5515.47, 5350.47, 5114.22, 5557.45, 5683.99, 6512.75, 6285.7, 7120.52, 7718.31, 9312.85, 9172.63, 13605.2, 10445, 15033.5, 11020.9, 16483.2, 12157.1, 17717.3, 14155.3, 19343.3, 15017.3, 22849.9, 15017.3, 24894.4, 17590.3, 35114.4, 20602.7, 57186.9, 22716.4, 68210, 30604.4, 103174, 33648.4, 113304, 62965.7, -358.721, 60481.4 )
+shape_range = Vector2( 0, 15 )
+trigger = false
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+editor/display_folded = true
+layer = -1
 offset = Vector2( 0, 0 )
-texture/texture = null
-texture/offset = Vector2( 0, 0 )
-texture/scale = Vector2( 1, 1 )
-texture/rotation = 0.0
-invert/enable = false
-invert/border = 100.0
+rotation = 0.0
+scale = Vector2( 1, 1 )
+scroll/offset = Vector2( 0, 0 )
+scroll/base_offset = Vector2( 0, 0 )
+scroll/base_scale = Vector2( 1, 1 )
+scroll/limit_begin = Vector2( 0, 0 )
+scroll/limit_end = Vector2( 0, 0 )
+scroll/ignore_camera_zoom = false
 
-[node name="Particles2D" type="Particles2D" parent="."]
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
-transform/pos = Vector2( 2911.4, 1331.54 )
+transform/pos = Vector2( 87.8629, 90.079 )
+motion/scale = Vector2( 0, 0 )
+motion/offset = Vector2( 0, 0 )
+motion/mirroring = Vector2( 0, 0 )
+
+[node name="Particles2D" type="Particles2D" parent="ParallaxBackground/ParallaxLayer"]
+
+visibility/visible = false
+transform/pos = Vector2( 2823.54, 1241.46 )
 config/amount = 32
 config/lifetime = 20.0
 config/process_mode = 1
 config/half_extents = Vector2( 4000, 3000 )
-config/texture = ExtResource( 4 )
+config/texture = ExtResource( 5 )
 params/direction = 90.0
 params/spread = 0.0
 params/linear_velocity = 40.0
@@ -182,32 +271,87 @@ params/anim_initial_pos = 0.0
 randomness/linear_velocity = 1.0
 randomness/initial_size = 0.5
 randomness/final_size = 0.5
-color/color_ramp = SubResource( 13 )
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-
-layer = -1
-offset = Vector2( 0, 0 )
-rotation = 0.0
-scale = Vector2( 1, 1 )
-scroll/offset = Vector2( 0, 0 )
-scroll/base_offset = Vector2( 0, 0 )
-scroll/base_scale = Vector2( 1, 1 )
-scroll/limit_begin = Vector2( 0, 0 )
-scroll/limit_end = Vector2( 0, 0 )
-scroll/ignore_camera_zoom = false
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-
-transform/pos = Vector2( 87.8629, 90.079 )
-motion/scale = Vector2( 0, 0 )
-motion/offset = Vector2( 0, 0 )
-motion/mirroring = Vector2( 0, 0 )
+color/color_ramp = SubResource( 18 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 
-transform/pos = Vector2( 2731.23, 1270.18 )
-transform/scale = Vector2( 6000, 7 )
-texture = ExtResource( 5 )
+transform/pos = Vector2( 4421.33, 2136.59 )
+transform/scale = Vector2( 10000, 10 )
+texture = ExtResource( 6 )
+
+[node name="gui" type="CanvasLayer" parent="."]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="dialog" parent="gui" instance=ExtResource( 7 )]
+
+visibility/visible = false
+margin/right = -360.0
+
+[node name="Proximity" parent="gui" instance=ExtResource( 8 )]
+
+visibility/visible = false
+margin/left = 440.0
+margin/top = 613.0
+margin/right = 1105.0
+margin/bottom = 1092.0
+
+[node name="Contact" parent="gui" instance=ExtResource( 8 )]
+
+visibility/opacity = 0.0
+margin/left = 506.0
+margin/top = 543.0
+margin/right = 1171.0
+margin/bottom = 1022.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="gui"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/Contact = SubResource( 19 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="scoreLabel" type="Label" parent="gui"]
+
+rect/min_size = Vector2( 200, 0 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 828.0
+margin/top = 12.0
+margin/right = 1028.0
+margin/bottom = 45.0
+custom_fonts/font = ExtResource( 9 )
+text = "Score:"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="score" type="Label" parent="gui/scoreLabel"]
+
+rect/min_size = Vector2( 200, 0 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 231.0
+margin/top = 0.0
+margin/right = 431.0
+margin/bottom = 69.0
+custom_fonts/font = ExtResource( 9 )
+text = "0"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 
